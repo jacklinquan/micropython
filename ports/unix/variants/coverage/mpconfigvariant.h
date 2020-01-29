@@ -24,18 +24,18 @@
  * THE SOFTWARE.
  */
 
-// Default unix config while intended to be comprehensive, may still not enable
-// all the features, this config should enable more (testable) options.
+// This config enables almost all possible features such that it can be used
+// for coverage testing.
 
 #define MICROPY_VFS                    (1)
 #define MICROPY_PY_UOS_VFS             (1)
-
-#include <mpconfigport.h>
 
 #define MICROPY_OPT_MATH_FACTORIAL     (1)
 #define MICROPY_FLOAT_HIGH_QUALITY_HASH (1)
 #define MICROPY_ENABLE_SCHEDULER       (1)
 #define MICROPY_READER_VFS             (1)
+#define MICROPY_REPL_EMACS_WORDS_MOVE  (1)
+#define MICROPY_REPL_EMACS_EXTRA_WORDS_MOVE (1)
 #define MICROPY_WARNINGS_CATEGORY      (1)
 #define MICROPY_MODULE_GETATTR         (1)
 #define MICROPY_PY_DELATTR_SETATTR     (1)
@@ -55,8 +55,6 @@
 #define MICROPY_PY_URE_MATCH_SPAN_START_END (1)
 #define MICROPY_PY_URE_SUB             (1)
 #define MICROPY_VFS_POSIX              (1)
-#undef MICROPY_VFS_FAT
-#define MICROPY_VFS_FAT                (1)
 #define MICROPY_PY_FRAMEBUF            (1)
 #define MICROPY_PY_COLLECTIONS_NAMEDTUPLE__ASDICT (1)
 #define MICROPY_PY_UCRYPTOLIB          (1)
